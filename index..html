@@ -4,23 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Skills</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="data/user.js" defer></script> <!-- This is representing my API --> 
     <script src="scripts/app.js" defer></script>   
 </head>
-<body>
-    <form id="skill-form">
-        <label for="skill">Enter a skill:</label>
-        <input type="text" id="skill" name="skill" required>
-        <button type="submit">Add Skill</button>
-    </form>
-    <div>
-        <ul>
+    <body>
+
+    <div class="navbar">
+        <ol class="nav">
             <li>Home</li>
-            <li>Matchess</li>
-            <li>Home</li>
-            <li>Home</li>
-        </ul>
+            <li>Search</li>
+            <li>Form</li>
+            <li>Profile</li>
+        </ol>
     </div>
-</body>
+    
+    <div class="form">
+        <form id="skill-form">
+            <label for="skill">Enter a skill:</label>
+            <input type="text" id="skill" name="skill" required>
+            <button type="submit">Add Skill</button>
+        </form>
+    </div>
+    <button class="search" aria-label="Search" placeholder="Search"></button>
+    <label for="search-field">Search</label>
+    <input name="search" type="search" id="search-field">
+
+    <div class="usercards" id="displaycards">
+        <div class="userCard1 cards"></div>
+        <div class="userCard2 cards"></div>
+        <div class="userCard3 cards"></div>
+        <div class="userCard4 cards"></div>
+        <div class="userCard5 cards"></div>
+        <div class="userCard6 cards"></div>
+        <div class="userCard7 cards"></div>
+        <div class="userCard8 cards"></div>
+        <div class="userCard9 cards"></div>
+        <div class="userCard10 cards"></div>
+    </div>
+
+
+    </body>
 </html>
