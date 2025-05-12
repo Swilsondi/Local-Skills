@@ -1,26 +1,50 @@
 * {
-    background: white;
-    color: black;
+    background: grey;
     font-family:Arial, Helvetica, sans-serif;
 }
 
 
-.nav {
-    border: 10px solid black;
-    list-style-type: none;
-    gap: 100px;
+/* Reset margin and padding for the body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box model */
+}
+
+.navbar{
     display: flex;
-    padding: 10px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+    background-color: black;
+}
+
+.nav {
+    border: 5px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    padding: 20px;
     text-align: center;
     flex: 1;
-    color: white;
-    height: 50px;
+    color: black;
+    height: 100px;
+    background-color: black;
+    margin: auto;
+    flex-wrap: flex-end;
 }
 
 .nav li{
-   margin-left: auto;
    font-size: 50px;
    font-weight: 10px;
+   background-color: black;
+   text-align: center;
+   margin: auto;
+   color: red;
 }
 
 .usercards {
@@ -34,4 +58,17 @@
     display: inline-flex;
     gap: 10px
 
+}
+
+.form {
+    margin-bottom: 60px;;
+    width: 100%;
+    height: 700px;
+    border: 5px solid black;
+}
+
+#skill-form {
+    align-items: center;
+    text-align: center;
+    
 }
