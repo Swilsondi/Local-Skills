@@ -29,38 +29,40 @@
         <div class="left-section">
             <label for="name">Enter your name:</label>
             <input type="text" id="userName" name="users-name" placeholder="Your full name" title="Enter your full name" required>
-            <button type="submit">Add your name</button>    
+            <button type="button">Add your name</button>    
         </div>
 
         <div class="right-section">
             <label for="skill">Enter a skill:</label>
             <input type="text" id="skill" name="skill" placeholder="Your skill" title="Enter a skill you have" required>
-            <button type="submit">Add Skill</button>        
+            <button type="button">Add Skill</button>        
         </div>
 
         <div class="left-section">
             <label for="bio">Write a short bio:</label>
-            <textarea id="usersBio" name="users-bio" rows="5" cols="35" placeholder="Write a short bio about yourself" title="Write a short bio about yourself" required></textarea>
-            <button type="submit">Add Bio</button>
+            <textarea id="usersBio" name="users-bio" rows="3" cols="26" placeholder="Write a short bio about yourself" title="Write a short bio about yourself" required></textarea>
+            <button type="button">Add Bio</button>
         </div>
 
         <div class="right-section">
             <label for="tags">Add your personal tags</label>
             <input type="text" id="user-Tags" name="tags" placeholder="Add tags (e.g., developer)" title="Add personal tags" required>
-            <button type="submit">Add tags</button>
+            <button type="button">Add tags</button>
         </div>
 
         <div class="left-section">
             <label for="contact">Enter your contact email:</label>
             <input type="email" id="userEmail" name="email" placeholder="Your email address" title="Enter your contact email" required>
-            <button type="submit">Add Email</button>         
+            <button type="button">Add Email</button>         
         </div>
 
         <div class="right-section">
             <label for="image">Add an image</label>
-            <input type="image" id="userImage" name="image" src="path/to/image.jpg" alt="Add Image" title="Click to add an image" required>
-            <button type="submit">Add Image</button>
+            <input type="file" id="userImage" accept="image/*" src="path/to/image.jpg" alt="Add Image" title="Click to add an image" required>
+            <button type="button">Add Image</button>
         </div>
+
+        <button type="submit">Submit</button>
         </form>
     </div>
     
