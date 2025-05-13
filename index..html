@@ -25,35 +25,54 @@
 
     <div class="form">
         <form id="skill-form">
+
+        <div class="left-section">
             <label for="name">Enter your name:</label>
-            <input type="text" id="userName" name="users-name" required>
+            <input type="text" id="userName" name="users-name" placeholder="Your full name" title="Enter your full name" required>
             <button type="submit">Add your name</button>    
+        </div>
 
+        <div class="right-section">
             <label for="skill">Enter a skill:</label>
-            <input type="text" id="skill" name="skill" required>
+            <input type="text" id="skill" name="skill" placeholder="Your skill" title="Enter a skill you have" required>
             <button type="submit">Add Skill</button>        
+        </div>
 
+        <div class="left-section">
             <label for="bio">Write a short bio:</label>
-            <input type="text-area" id="usersBio" name="users-bio" required>
+            <textarea id="usersBio" name="users-bio" rows="8" cols="70" placeholder="Write a short bio about yourself" title="Write a short bio about yourself" required></textarea>
             <button type="submit">Add Bio</button>
+        </div>
 
+        <div class="right-section">
             <label for="tags">Add your personal tags</label>
-            <input type="text" id="user-Tags" name="tags" required>
+            <input type="text" id="user-Tags" name="tags" placeholder="Add tags (e.g., developer)" title="Add personal tags" required>
             <button type="submit">Add tags</button>
-            
+        </div>
+        
+        <div class="left-section">
             <label for="contact">Enter your contact email:</label>
-            <input type="email" id="userEmail" name="email" required>
+            <input type="email" id="userEmail" name="email" placeholder="Your email address" title="Enter your contact email" required>
             <button type="submit">Add Email</button>         
-            
-            <label for="image">Add a image</label>
-            <input type="image" id="userImage" name="image" required>
+        </div>
+
+        <div class="right-section">
+            <label for="image">Add an image</label>
+            <input type="image" id="userImage" name="image" src="path/to/image.jpg" alt="Add Image" title="Click to add an image" required>
             <button type="submit">Add Image</button>
+        </div>
         </form>
+
+
+
     </div>
     
-    <button class="search" aria-label="Search" placeholder="Search"></button>
-    <label for="search-field">Search</label>
-    <input name="search" type="search" id="search-field">
+    <div>
+        <button class="search" aria-label="Search" placeholder="Search"></button>
+        <label for="search-field">Search</label>
+        <input name="search" type="search" id="search-field">
+    </div>
+
 
     <div class="usercards" id="displaycards">
         <div class="userCard1 cards"></div>
