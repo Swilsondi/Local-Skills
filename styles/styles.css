@@ -16,8 +16,9 @@ html, body {
     margin: auto;
     width: 100%;
     height: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     background-color: black;
+    justify-content: space-evenly;
 }
 
 .nav {
@@ -32,14 +33,37 @@ html, body {
     text-align: center;
     flex: 1;
     color: black;
-    height: 100px;
+    height: 30px;
     background-color: black;
     margin: auto;
     flex-wrap: flex-end;
+    position: fixed;
 }
 
+.red-bar {
+    background-color: red;
+    border: 1px solid black;
+    width: 100%;
+    height:  60px;
+    border-bottom: none;
+}
+
+.red-bar > p {
+    color: white;
+    background-color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: lighter;
+}
+
+.effect-intro {
+    background-color: red;
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+}
 .nav li{
-   font-size: 50px;
+   font-size: 20px;
    font-weight: 10px;
    background-color: black;
    text-align: center;
@@ -70,5 +94,10 @@ html, body {
 #skill-form {
     align-items: center;
     text-align: center;
-    
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+    margin-top: 20px;
 }
