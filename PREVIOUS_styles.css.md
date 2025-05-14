@@ -1,3 +1,6 @@
+# Previous styles.css
+
+```css
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +10,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 
 /* Reset margin and padding for the body and html */
 html, body {
@@ -233,4 +235,4 @@ button:hover, .submit-btn:hover, .search:hover {
         gap: 1rem;
     }
 }
-
+```

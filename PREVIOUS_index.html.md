@@ -1,3 +1,6 @@
+# Previous index.html
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,15 +73,8 @@
 
         <section class="usercards" id="displaycards">
             <!-- Sample card for design preview -->
-            <div class="cards">
-                <img src="https://via.placeholder.com/120" alt="User" class="card-img">
-                <h3>Jane Doe</h3>
-                <p><strong>Skill:</strong> Web Developer</p>
-                <p><strong>Bio:</strong> Passionate about building web apps.</p>
-                <div class="tags"><span>#developer</span> <span>#javascript</span></div>
-                <p><a href="mailto:jane@example.com" class="card-email">Contact</a></p>
-            </div>
         </section>
     </main>
 </body>
 </html>
+```
