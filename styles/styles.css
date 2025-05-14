@@ -214,6 +214,15 @@ input {
     justify-content: center;
 }
 
+.right-section input[type="file"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%; /* or 100% for full width, adjust as needed */
+    margin-left: 2.5rem;
+}
+
 .left-section > * {
     max-width: fit-content;
     min-width: min-content;
@@ -294,3 +303,4 @@ textarea {
   transform: translateY(-5px);
   transition: 0.3s;
 }
+
