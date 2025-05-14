@@ -4,6 +4,9 @@
     padding: 0;
     font-family:Arial, Helvetica, sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 
 /* Reset margin and padding for the body and html */
@@ -43,8 +46,16 @@ html, body {
     border-bottom: 3px solid pink;
 }
 
-.red-bar {
-    background-color: red;
+
+.nav li:hover {
+  color: red;
+  border-bottom: 2px solid red;
+  cursor: pointer;
+  border-radius: .5rem;
+}
+
+/* .red-bar {
+    background: linear-gradient(to left, rgb(214, 70, 70), rgb(195, 162, 52));
     border: 1px solid black;
     width: 100%;
     height:  60px;
@@ -60,18 +71,43 @@ html, body {
 
 .red-bar > p {
     color: white;
-    background-color: red;
+    background: transparent;
     text-align: center;
     margin-top: 20px;
     font-weight: lighter;
 }
 
 .effect-intro {
-    background-color: red;
+    background-color: transparent;
     color: black;
     font-size: lighter;
     font-weight: bolder;
+    border: none;
+
+} */
+
+.hero-section {
+  background: linear-gradient(to right, #a17e7e, #c46464);
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: 60px; /* to push below the fixed nav */
+  border-bottom: 2px solid red;
 }
+
+.hero-section p {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+
+}
+
+.hero-section .effect-intro {
+  font-weight: 800;
+  color: red;
+}
+
+/* End of new section */
 .nav li{
    font-size: 20px;
    font-weight: 10px;
@@ -97,9 +133,10 @@ html, body {
 .form {
     margin-bottom: 60px;;
     width: 100%;
-    height: 120vh;
-    border: 5px solid black;
+    height: 220vh;
+    /* border: 5px solid black; */
     background: linear-gradient(to right, rgb(214, 70, 70), rgb(195, 162, 52));
+    /* margin-top: none; */
 
 }
 
@@ -110,8 +147,8 @@ html, body {
     justify-content: space-evenly;
     flex-direction: column;
     flex: 1;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 1rem;
+    /* margin-top: 20px; */
     height: auto;
 }
 
@@ -122,6 +159,12 @@ button {
     color: red;
     font-weight: bold;
     border-color: white;
+}
+button:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.05); /* Slight zoom */
+  transition: all 0.2s ease-in-out;
 }
 
 ::placeholder {
@@ -194,6 +237,7 @@ textarea {
     padding: 20px;
     border-radius: 5%;
     font-size: medium;
+    justify-content: flex-start; 
 }
 
 .searchBtn {
@@ -204,4 +248,49 @@ textarea {
     height: 15rem;
     align-items: center;
     justify-content: center;
+    background: black;
+    gap: 1rem;
+}
+
+.searchBtn > p {
+    font-style: italc;
+    font-weight: lighter;
+}
+
+.searchBtn > * {
+    background-color: transparent;
+    color: red;
+    border-radius: 10%;
+    gap: 1rem;
+}
+.search {
+    color: white;
+
+}
+
+.usercards {
+  display: flex;
+  flex-wrap: wrap;                /* Allows wrapping to new lines */
+  gap: 25px;                      /* Space between boxes */
+  justify-content: space-evenly;   /* Align items from the left */
+  padding: 20px;
+  align-items: center;
+  height: 290vh;
+  background-color: red;
+}
+
+.cards {
+  background-color: black;
+  border: 1px solid #000000;
+  border-radius: 11px;
+  padding: 20px;
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cards:hover {
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+  transform: translateY(-5px);
+  transition: 0.3s;
 }

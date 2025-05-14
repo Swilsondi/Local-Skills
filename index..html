@@ -19,7 +19,7 @@
         </ol>
     </div>
     
-   <div class="red-bar">
+   <div class="hero-section">
     <p>Welcome, Here You Can Search Users, Fill out forms to be connected and <span class="effect-intro">More!</span></p>
    </div>
 
@@ -40,7 +40,7 @@
 
         <div class="left-section">
             <label for="bio">Write a short bio:</label>
-            <textarea id="usersBio" name="users-bio" rows="3" cols="26" placeholder="Write a short bio about yourself" title="Write a short bio about yourself" required></textarea>
+            <textarea id="usersBio" name="users-bio" rows="3" cols="20" placeholder="Write a short bio about yourself" title="Write a short bio about yourself" required></textarea>
             <button type="button">Add Bio</button>
         </div>
 
@@ -65,11 +65,14 @@
         <button type="submit">Submit</button>
         </form>
     </div>
-    
+    <!--push searchBtn div closer to form section -->
+
     <div class="searchBtn">
-        <button class="search" aria-label="Search" placeholder="Search"></button>
-        <label for="search-field">Search</label>
+        <p>Filter your search below</p>
         <input name="search" type="search" id="search-field">
+        <button class="search" aria-label="Search" placeholder="Search">
+        <label for="search-field">Search</label>
+        </button>   
     </div>
 
 
