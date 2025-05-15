@@ -1,7 +1,7 @@
     // This file contains a list of users with their details.
 
 
-    const users = [
+   export let users = [
         {firstName: "Spencer",
             lastName: "Wilson", 
             skill: "Full Stack Developer", 
@@ -83,7 +83,7 @@
             email: "leomichle@gmail.com", 
             image: "https://avatars.githubusercontent.com/u/12345678?v=4"},
 
-        {firsrtName: "Lucas", 
+        {firstName: "Lucas", 
             lastName: "Drinfer", 
             skill: "Dev Ops Engineer", 
             bio: "Hi, I am Lucas a dev ops engineer.", 
@@ -92,3 +92,4 @@
             email: "drniferl@gmail.com", 
             image: "https://avatars.githubusercontent.com/u/12345678?v=4"},
     ]
+
