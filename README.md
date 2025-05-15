@@ -105,3 +105,22 @@ local-skills/
 - **When it breaks, slow down**: What changed? What’s undefined? What should be happening?
 - **Use bugs as fuel** — don’t let them steal momentum.
 - **Come back here** when you're confused about the big picture.
+
+Plan Your Data Flow
+Where is your data?
+In data/user.js (your fake database).
+Where will you display it?
+In the .usercards section as cards.
+2. Rendering User Cards
+Write a function in app.js that loops through your users array and creates HTML for each card.
+Insert those cards into the #displaycards container.
+3. Form Submission
+Add an event listener to your form.
+On submit, prevent default, grab the form values, and create a new user object.
+Add this new user to your users array and re-render the cards.
+4. Search/Filter
+Add an event listener to your search input.
+On input, filter the users array by name, skill, or tags.
+Re-render the cards with only the matching users.
+5. (Optional) Local Storage
+If you want to persist new users, save the array to localStorage after each addition, and load from it on page load.

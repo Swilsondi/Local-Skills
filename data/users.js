@@ -2,7 +2,7 @@
 
 
     const users = [
-        {firsrnName: "Spencer",
+        {firstName: "Spencer",
             lastName: "Wilson", 
             skill: "Full Stack Developer", 
             bio: "I am a full stack developer with a passion for creating web applications.", 
@@ -65,7 +65,7 @@
             email: "nabrianb@gmail.com", 
             image: "https://avatars.githubusercontent.com/u/12345678?v=4"},
 
-        {firsrtName: "James", 
+        {firstName: "James", 
             lastName: "Wilson", 
             skill: "Backend Developer", 
             bio: "Hi, I am James a backend developer.", 
