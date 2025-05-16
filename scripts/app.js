@@ -1,12 +1,10 @@
-
-
 import { users } from '../data/users.js';
 
 // const userCard = document.querySelector('.usercards');
 const searchInput = document.querySelector('#search-field');
 const searchButton = document.querySelector('.search');
 const userForm = document.querySelector('#skill-form'); // Select the form element
-const userFormInput = document.querySelectorAll('.formgroup input'); // Select all input fields
+const userFormInput = document.querySelectorAll('#skill-form input, #skill-form textarea'); // Select all input fields
 
 // Searching to see if user exists then removes user input after successful find.
 function findUser(userSearch) {
@@ -29,6 +27,10 @@ function findUser(userSearch) {
             isFound = true;
             console.log("User is available");
             break;
+        } else {
+            console.log("no active user");
+            alert("User does not exist");
+            return;
         }
     }
     if (!isFound) {
@@ -46,17 +48,19 @@ searchButton.addEventListener('click', function () {
     if (e.key === 'Enter') {
         findUser(searchInput.value);
         searchInput.value = ""; // Clear the input field
+    } else {
+        return;
     }
  })
 
 
 userForm.addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the form from reloading the page
-    
     const formData = {};
     for (let i = 0; i < userFormInput.length; i++) {
         const input = userFormInput[i];
         formData[input.name] = input.value; // Collect input values by their name attribute
+        input.value = ""; // Clear the input field
     }
     
     console.log(formData); // Logs an object with all input values
