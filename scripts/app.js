@@ -2,7 +2,7 @@
 
 import { users } from '../data/users.js';
 
-const userCard = document.querySelector('.usercards');
+// const userCard = document.querySelector('.usercards');
 const searchInput = document.querySelector('#search-field');
 const searchButton = document.querySelector('.search');
 const userForm = document.querySelector('#skill-form'); // Select the form element
@@ -39,8 +39,15 @@ function findUser(userSearch) {
 
 searchButton.addEventListener('click', function () {
     findUser(searchInput.value);
-    searchInput.value = ""; // Clear the input field
+    searchInput.value = ""; // Clear the input field;
 });
+
+ searchInput.addEventListener('keypress', function(e){
+    if (e.key === 'Enter') {
+        findUser(searchInput.value);
+        searchInput.value = ""; // Clear the input field
+    }
+ })
 
 
 userForm.addEventListener('submit', function (event) {
