@@ -5,7 +5,7 @@ const searchInput = document.querySelector('#search-field');
 const searchButton = document.querySelector('.search');
 const userForm = document.querySelector('#skill-form'); // Select the form element
 const userFormInput = document.querySelectorAll('#skill-form input, #skill-form textarea'); // Select all input fields
-const userCards = document.querySelector('.cards');
+ const userCards = document.querySelector('.usercards'); // or '#displaycards'
 
 // Searching to see if user exists then removes user input after successful find.
 function findUser(userSearch) {
@@ -15,11 +15,15 @@ function findUser(userSearch) {
         const lowerFirstName = users[i].firstName.toLowerCase();
         const lowerLastName = users[i].lastName.toLowerCase();
         const lowerSkill = users[i].skill.toLowerCase();
+        const lowerTags = users[i].tags.map(function (tag) {
+            return tag.toLowerCase();
+        });
 
         if (
             lowerUserSearch.includes(lowerFirstName) ||
             lowerUserSearch.includes(lowerLastName) ||
-            lowerUserSearch.includes(lowerSkill)
+            lowerUserSearch.includes(lowerSkill) ||
+            lowerTags.some(tag => lowerUserSearch.includes(tag))
         ) {
             isFound = true;
 // currently the form works and the user search works but first we need to display all the users upon page load and I also need to fix the search for skills and tags to find the user. So far the first name works for pulling users. Going to  need that extra form input for last name.
@@ -37,7 +41,7 @@ function findUser(userSearch) {
             console.log(userCards.innerHTML);
             console.log("User is available");
             break;
-        }
+        } 
     }
 
     if (!isFound) {
@@ -79,3 +83,27 @@ function addUser(userFormData) {
     users.push(userFormData); // Add the new user to the users array
     console.log('User added:', userFormData);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Code here runs when the DOM is fully loaded
+    // For example, display all users:
+    displayAllUsers();
+});
+
+function displayAllUsers() {
+    let allCardsHTML = "";
+    for (let i = 0; i < users.length; i++) {
+        allCardsHTML += `
+            <div class="cards">
+                <img src="${users[i].image || 'https://via.placeholder.com/120'}" alt="${users[i].firstName}" class="card-img">
+                <h3>${users[i].firstName} ${users[i].lastName}</h3>
+                <p><strong>Skill:</strong> ${users[i].skill}</p>
+                <p><strong>Bio:</strong> ${users[i].bio}</p>
+                <div class="tags">${users[i].tags.map(tag => `<span>#${tag}</span>`).join(' ')}</div>
+                <p><a href="mailto:${users[i].email}" class="card-email">Contact</a></p>
+            </div>
+        `;
+    }
+    userCards.innerHTML = allCardsHTML;
+}
+
